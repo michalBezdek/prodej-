@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodej sekaček</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<div id="layoutToggle">
+    <label for="gridLayout">Mřížka</label>
+    <input type="radio" id="gridLayout" name="layout" checked>
+    <label for="lineLayout">Řádek</label>
+    <input type="radio" id="lineLayout" name="layout">
+</div>
+<hr  style=" height:10px;">
+ 
+<div id="products" class="product-container">
+ 
+    <div class="product">
+        <img src="./obrazky/sekacka1.jpg" alt="Sekačka 1">
+        <h3>KYStian</h3>
+        <p>Cena: 1000000 Zimbabwean dollar</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka2.jpg" alt="Sekačka 2">
+        <h3>turbo sekacka ultra</h3>
+        <p>Cena: ∞ dollars</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka3.jpg" alt="Sekačka 3">
+        <h3>Sekačka mega</h3>
+        <p>Cena: 109697 dollars</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka4.jpg" alt="Sekačka 4">
+        <h3>giga mega sekacka</h3>
+        <p>Cena: ∞∞∞∞∞∞∞∞∞∞∞∞∞ dollars</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka5.jpg" alt="Sekačka 5">
+        <h3>pog sekacka</h3>
+        <p>Cena: 123456789123567 dollars</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka6.jpg" alt="Sekačka 6">
+        <h3>kamo nejlepsi sekacka mega giga</h3>
+        <p>Cena: ∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞∞dollars</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka7.jpg" alt="Sekačka 7">
+        <h3>zavodni sekacka</h3>
+        <p>Cena: 12345678987654567 dollars</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka8.jpg" alt="Sekačka 8">
+        <h3>hoho sekacka</h3>
+        <p>Cena: ∞∞∞∞∞∞∞dollars</p>
+    </div>
+    <div class="product">
+        <img src="./obrazky/sekacka9.jpg" alt="Sekačka 9">
+        <h3>moderni sekacka</h3>
+        <p>Cena: 10388 dollars</p>
+    </div>
+  
+</div>
+ 
+<script>
+    const gridLayout = document.getElementById('gridLayout');
+    const lineLayout = document.getElementById('lineLayout');
+    const productsContainer = document.getElementById('products');
+ 
+    gridLayout.addEventListener('change', function () {
+        if (gridLayout.checked) {
+            productsContainer.classList.remove('line-layout');
+            productsContainer.classList.add('product-container');
+        }
+    });
+ 
+    lineLayout.addEventListener('change', function () {
+        if (lineLayout.checked) {
+            productsContainer.classList.remove('product-container');
+            productsContainer.classList.add('line-layout');
+        }
+    });
+</script>
+ 
+</body>
+</html>
